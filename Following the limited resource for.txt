@@ -1,0 +1,14 @@
+Following the limited resource for the client make use of ROAS on the switches and configure the routers and switches where by
+
+1: configure the switches interfaces connected to pcs as access ports in the VLAN
+
+2: configure  the connection between SW1 and Sw2 as a trunk allowing only the necessary VLAN
+    2.1 configure an used VLAN as the native VLAN
+    2.2 make sure all necessary VLAN exist on each switch
+
+3: Configure the connection between SW2 and R1 using router on a stick
+assign the last usable address to each subnet to R1 subinterfaces
+
+4: Test connectivity by pinning between pcs. All pc should be able to connect to each other. 
+
+it allows for inter-VLAN routing, enabling communication between different virtual local area networks (VLANs) on a single physical connection to a router, even when the switch itself is only a Layer 2 device, meaning it cannot normally route traffic between VLANs on its own
